@@ -1,0 +1,48 @@
+<div class="row mx-0 d-flex align-items-center">
+   <div class=" col-md-4 my-2 h-100" *ngFor="let prod of products">
+     <mat-card class="example-card" >
+  <mat-card-title-group>
+    <mat-card-title class="title title-1"><h1></h1>{{prod.title}}</mat-card-title>
+    <mat-card-subtitle class="text-danger subtitle">{{prod.category}}</mat-card-subtitle>
+    <img class="img-fluid" mat-card-md-image [src]="prod.thumbnail">
+  </mat-card-title-group>
+  <div class="info">
+    <mat-card-title class="title">{{prod.title}}</mat-card-title>
+    <div>
+      <p class="text-capitalize">warrantyInformation : {{prod.warrantyInformation}}</p> 
+      <p class="text-capitalize">shippingInformation : {{prod.shippingInformation}}</p>
+      <p class="text-capitalize ">availabilityStatus : <strong class="text-success">{{prod.availabilityStatus}}</strong></p>
+    </div>
+    <div d-flex justify-content-between>
+      <p class="text-capitalize">createdAt : {{prod.meta.createdAt}}</p>
+      <p class="text-capitalize">updatedAt  : {{prod.meta.updatedAt}}</p>
+      <p class="text-capitalize">barcode : {{prod.meta.barcode}}</p>
+    </div>
+  </div>
+  <mat-card-content class="h-100">
+    <div class="d-flex justify-content-between">
+        <p>
+          <strong>Price:${{prod.price}} </strong></p>
+        <p 
+       [ngClass]="{
+  'red': prod.rating < 3,
+  'yellow': prod.rating >= 3 && prod.rating <= 4,
+  'green': prod.rating > 4
+}"
+        class="star d-flex align-items-center justify-content-center">{{prod.rating}}<mat-icon 
+         [ngClass]="{
+  'red': prod.rating < 3,
+  'yellow': prod.rating >= 3 && prod.rating <= 4,
+  'green': prod.rating > 4
+}"
+        class="star" aria-hidden="false"  fontIcon="star"></mat-icon></p>
+    </div>
+  </mat-card-content >
+    <p>{{prod.description}}</p>
+ <button  mat-raised-button color="accent">
+        My Shopping Bag :  {{prod.stock}}
+</button>
+     </mat-card>
+ </div>
+</div>
+ 

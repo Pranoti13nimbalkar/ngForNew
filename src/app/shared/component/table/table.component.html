@@ -1,0 +1,178 @@
+   <div class="table-responsive">
+            <table class=" table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Sr.no.</th>
+                        <th>Planet Name</th>
+                        <th>DistanceFromSunKm</th>
+                        <th> diameterKm</th>
+                        <th> hasRings</th>
+                        <th> numberOfMoons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let  planet of   planets ; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{ planet.planetName}}</td>
+                        <td>{{ planet.distanceFromSunKm}}</td>
+                        <td>{{ planet.diameterKm}}</td>
+                        <td>{{ planet.hasRings ? 'Yes' : 'No'}}</td>
+                        <td>{{ planet.numberOfMoons}}</td>
+                    </tr>
+                </tbody>
+           </table>
+        </div>
+
+        <hr>
+        <div class="table-responsive">
+            <table class=" table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Sr.no.</th>
+                        <th> mountain Name</th>
+                        <th>heightMeters</th>
+                        <th> locationContinent</th>
+                        <th> firstAscentYear</th>
+                        <th> isVolcano</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let  mountain of  mountains ; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{ mountain.mountainName}}</td>
+                        <td>{{ mountain.heightMeters}}</td>
+                        <td>{{ mountain.locationContinent}}</td>
+                        <td>{{ mountain.firstAscentYear }}</td>
+                        <td>{{ mountain.isVolcano ? 'Yes' : 'No'}}</td>
+                    </tr>
+                </tbody>
+           </table>
+        </div>
+<hr>
+<div class="table-responsive">
+            <table class=" table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Sr.no.</th>
+                        <th> uniName</th>
+                        <th> foundedYear</th>
+                        <th>countryLocated</th>
+                        <th> studentCount</th>
+                        <th> worldRanking</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let  universitie of  universities ; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{universitie.uniName}}</td>
+                        <td>{{universitie.foundedYear}}</td>
+                        <td>{{universitie.countryLocated}}</td>
+                        <td>{{universitie.studentCount }}</td>
+                        <td>{{universitie.worldRanking}}</td>
+                    </tr>
+                </tbody>
+           </table>
+        </div>
+
+
+        <hr>
+<div class="table-responsive">
+            <table class=" table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Sr.no.</th>
+                        <th>  species</th>
+                        <th> averageWeightKg</th>
+                        <th> habitatType</th>
+                        <th>lifespanYears</th>
+                        <th>endangeredStatus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let animal of animals ; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{animal.species}}</td>
+                        <td>{{animal.averageWeightKg}}</td>
+                        <td>{{animal.habitatType}}</td>
+                        <td>{{animal.lifespanYears }}</td>
+                        <td>{{animal.endangeredStatus}}</td>
+                    </tr>
+                </tbody>
+           </table>
+        </div>
+<hr>
+<div class="table-responsive">
+            <table class=" table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Sr.no.</th>
+                        <th>  appName</th>
+                        <th> categoryType</th>
+                        <th> downloadsMillion</th>
+                        <th> developerCompany</th>
+                        <th>subscriptionRequired</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let  app of  apps  ; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{app.appName}}</td>
+                        <td>{{app.categoryType}}</td>
+                        <td>{{app.downloadsMillion}}</td>
+                        <td>{{app.developerCompany }}</td>
+                        <td>{{app.subscriptionRequired ? 'Yes' : 'No'}}</td>
+                    </tr>
+                </tbody>
+           </table>
+        </div>
+        <hr>
+<div class="table-responsive">
+            <table class=" table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Sr.no.</th>
+                        <th>  continentLabel</th>
+                        <th>  surfaceAreaMillionSqKm</th>
+                        <th> countriesCount</th>
+                        <th>populationBillion </th>
+                        <th>largestCountry</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let  continent of continents ; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{ continent.continentLabel}}</td>
+                        <td>{{ continent.surfaceAreaMillionSqKm}}</td>
+                        <td>{{ continent.countriesCount}}</td>
+                        <td>{{ continent.populationBillion }}</td>
+                        <td>{{ continent.largestCountry}}</td>
+                    </tr>
+                </tbody>
+           </table>
+        </div>
+<hr>
+
+<div class="table-responsive">
+            <table class=" table table-bordered ">
+                <thead>
+                    <tr>
+                        <th>Sr.no.</th>
+                        <th> dessertName</th>
+                        <th>  sugarContentGrams</th>
+                        <th> servingTemp</th>
+                        <th>mainIngredient </th>
+                       
+                </thead>
+                <tbody>
+                    <tr *ngFor="let  dessert of desserts ; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{ dessert.dessertName}}</td>
+                        <td>{{ dessert.sugarContentGrams}}</td>
+                        <td>{{ dessert.servingTemp}}</td>
+                        <td>{{ dessert.mainIngredient }}</td>
+                      
+                    </tr>
+                </tbody>
+           </table>
+        </div>
+<hr>
